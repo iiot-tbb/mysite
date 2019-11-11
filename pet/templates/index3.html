@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Dog Club</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-5">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'pet/css/style.css' %}" />
+</head>
+
+<body>
+	<div id="meta">
+		<span><img src="{% static 'pet/media/images/meta1.gif' %}" alt="" width="15" height="15" /> <a href="index.html">Home</a></span>																																																							<div style="position:absolute;top:1px;left:1px;height:0px;width:0px;overflow:hidden"><h1><a href="http://www.cssmoban.com">best free templates</a></h1></div>
+		<span><img src="{% static 'pet/media/images/meta2.gif' %}" alt="" width="15" height="15" /> <a href="index2.html">Contacts</a></span>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="index.html"><img src="{% static 'pet/media/images/but1.gif' %}" alt="" width="104" height="36" /></a></li>
+			<li><a href="index2.html" ><img src="{% static 'pet/media/images/but2.gif' %}" alt="" width="101" height="36" /></a></li>																																		
+			<li><a href="index3.html" class="active"><img src="{% static 'pet/media/images/but3.gif' %}" alt="" width="66" height="36" /></a></li>
+			<li><a href="index4.html"><img src="{% static 'pet/media/images/but4.gif' %}" alt="" width="115" height="36" /></a></li>
+			<li><a href="index5.html"><img src="{% static 'pet/media/images/but5.gif' %}" alt="" width="93" height="36" /></a></li>
+			<li><a href="index6.html"><img src="{% static 'pet/media/images/but6.gif' %}" alt="" width="114" height="36" /></a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div class="about">
+			<img src="{% static 'pet/media/images/title4.gif' %}" alt="" width="597" height="21" /><br />
+			<!-- <script type="text/javascript" src="http://192.168.1.44:8083/assets/player.js"></script><script type="text/javascript">p2ps_embed("auto", "live", "http://192.168.1.44:8083/videos/live/22/39/tUabV17nAPCev", "p2ps_video", "640", "480", "10.1.0", "http://192.168.1.44:8083/assets/expressInstall.swf",{}, {allowFullScreen:true, allowScriptAccess: "always"});800Limediaserver</script><div id="p2ps_video"><h1>我们需要Flash player 10.1 或以上版本来播放。</h1><p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="安装最新的Flash player" /></a></p></div> -->
+			<!-- <div style="text-align:center;">
+				<button onclick="playPause()">播放/暂停</button> 
+				<button onclick="makeBig()">大</button>
+				<button onclick="makeNormal()">中</button>
+				<button onclick="makeSmall()">小</button>
+				<br /> 
+				<video id="video1" width="420" style="margin-top:15px;">
+				  <source src="/example/html5/mov_bbb.mp4" type="video/mp4" />
+				  <source src="{% static 'pet/media/video/mov_bbb.mp4' %}" type="video/ogg" />
+				  Your browser does not support HTML5 video.
+				</video>
+			  </div> --> 
+			  <embed src="//player.video.iqiyi.com/52ffc0800911b797788bf9f5157466b0/0/0/w_19rt8s2lbd.swf-albumId=4887823109-tvId=4887823109-isPurchase=0-cnId=undefined" allowFullScreen="true" quality="high" width="480" height="350" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+			<!--  <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=i0523g00fdh" allowFullScreen="true"></iframe> -->
+			  <script type="text/javascript">
+				var myVideo=document.getElementById("video1");
+				
+				function playPause()
+				{ 
+				if (myVideo.paused) 
+				  myVideo.play(); 
+				else 
+				  myVideo.pause(); 
+				} 
+				
+				function makeBig()
+				{ 
+				myVideo.width=560; 
+				} 
+				
+				function makeSmall()
+				{ 
+				myVideo.width=320; 
+				} 
+				
+				function makeNormal()
+				{ 
+				myVideo.width=420; 
+				} 
+				</script> 
+		</div>
+		<div class="list">
+			<img src="{% static 'pet/media/images/title5.gif' %}" alt="" width="256" height="21" /><br />
+			<ul>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Aenean mturpis</li>
+				<li>Maecenas hendrerit masa laoreet</li>
+				<li>Tellus er sodales enim</li>
+				<li>Massa ac laoreet iaculipede</li>
+			</ul>
+			<img src="{% static 'pet/media/images/line.gif' %}" alt="" width="256" height="1" />
+			<ul>
+				<li>Donec massa</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Nulla pulvinar</li>
+				<li>Maecenas hendrerit, massa</li>
+				<li>Mauris u tincidunt quis</li>
+			</ul>
+		</div>
+		<img src="{% static 'pet/media/images/phone.jpg' %}" alt="" width="953" height="87" /><br />
+  	</div>
+	<div id="footer">
+		<div>
+			<a href="index.html">Home</a> | <a href="index2.html">About Club</a> | <a href="index2.html">News</a> | <a href="index2.html">Photogallery</a> | <a href="index2.html">Sponsors</a> | <a href="index2.html">Contact us</a>
+		</div>
+	</div>
+	<div id="copyright">
+		Copyright &copy;. All rights reserved. Design from <a href="#" target="_blank" title="Free Templates">tbb.com</a>
+	</div>
+</body>
+<script src="{% static 'pet/js/jquery.min.js' %}"></script>
+<script src="{% static 'pet/js/yourpet.js' %}"></script>
+</html>

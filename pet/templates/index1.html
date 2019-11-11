@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Dog Club</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-5">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'pet/css/style.css' %}" />
+</head>
+
+<body>
+	<div id="meta">
+		<span><img src="{% static 'pet/media/images/meta1.gif' %}" alt="" width="15" height="15" /> <a href="index.html">Home</a></span>																																																							<div style="position:absolute;top:1px;left:1px;height:0px;width:0px;overflow:hidden"><h1><a href="http://www.cssmoban.com">best free templates</a></h1></div>
+		<span><img src="{% static 'pet/media/images/meta2.gif' %}" alt="" width="15" height="15" /> <a href="index2.html">Contacts</a></span>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="index.html" class="active"><img src="{% static 'pet/media/images/but1.gif' %}" alt="" width="104" height="36" /></a></li>
+			<li><a href="index2.html"><img src="{% static 'pet/media/images/but2.gif' %}" alt="" width="101" height="36" /></a></li>																																		
+			<li><a href="index3.html"><img src="{% static 'pet/media/images/but3.gif' %}" alt="" width="66" height="36" /></a></li>
+			<li><a href="index4.html"><img src="{% static 'pet/media/images/but4.gif' %}" alt="" width="115" height="36" /></a></li>
+			<li><a href="index5.html"><img src="{% static 'pet/media/images/but5.gif' %}" alt="" width="93" height="36" /></a></li>
+			<li><a href="index6.html"><img src="{% static 'pet/media/images/but6.gif' %}" alt="" width="114" height="36" /></a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div class="about">
+			<img src="{% static 'pet/media/images/title4.gif' %}" alt="" width="597" height="21" /><br />
+			<p>Temerature: <span id="temperature"></span> </p>
+			<p>Humidity: <span id="humidity"></span> </p>
+			<p>Health: <span id="health"></span> </p>
+			<p>State: <span id="speed"></span> </p>
+		</div>
+		<div class="list">
+			<img src="{% static 'pet/media/images/title5.gif' %}" alt="" width="256" height="21" /><br />
+			<ul>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Aenean mturpis</li>
+				<li>Maecenas hendrerit masa laoreet</li>
+				<li>Tellus er sodales enim</li>
+				<li>Massa ac laoreet iaculipede</li>
+			</ul>
+			<img src="{% static 'pet/media/images/line.gif' %}" alt="" width="256" height="1" />
+			<ul>
+				<li>Donec massa</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Nulla pulvinar</li>
+				<li>Maecenas hendrerit, massa</li>
+				<li>Mauris u tincidunt quis</li>
+			</ul>
+		</div>
+		<img src="{% static 'pet/media/images/phone.jpg' %}" alt="" width="953" height="87" /><br />
+  	</div>
+	<div id="footer">
+		<div>
+			<a href="index.html">Home</a> | <a href="index2.html">About Club</a> | <a href="index2.html">News</a> | <a href="index2.html">Photogallery</a> | <a href="index2.html">Sponsors</a> | <a href="index2.html">Contact us</a>
+		</div>
+	</div>
+	<div id="copyright">
+		Copyright &copy;. All rights reserved. Design from <a href="#" target="_blank" title="Free Templates">tbb.com</a>
+	</div>
+</body>
+<script src="{% static 'pet/js/jquery.min.js' %}"></script>
+<script src="{% static 'pet/js/yourpet.js' %}"></script>
+</html>

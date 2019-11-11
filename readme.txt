@@ -1,0 +1,6 @@
+需要DHT22气温湿度传感器
+LED双色灯
+将01_dule_color_led.py
+socket_client_DHT22.py在树莓派上运行
+在服务器端运行django
+即可。

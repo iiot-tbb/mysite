@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Dog Club</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-5">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'pet/css/style.css' %}" />
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=gsVP00nRRxtnrOh3RET1BPGnBdoubSxx"></script>
+</head>
+
+<body>
+	<div id="meta">
+		<span><img src="{% static 'pet/media/images/meta1.gif' %}" alt="" width="15" height="15" /> <a href="index.html">Home</a></span>																																																							<div style="position:absolute;top:1px;left:1px;height:0px;width:0px;overflow:hidden"><h1><a href="http://www.cssmoban.com">best free templates</a></h1></div>
+		<span><img src="{% static 'pet/media/images/meta2.gif' %}" alt="" width="15" height="15" /> <a href="index2.html">Contacts</a></span>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="index.html"><img src="{% static 'pet/media/images/but1.gif' %}" alt="" width="104" height="36" /></a></li>
+			<li><a href="index2.html"><img src="{% static 'pet/media/images/but2.gif' %}" alt="" width="101" height="36" /></a></li>																																		
+			<li><a href="index3.html"><img src="{% static 'pet/media/images/but3.gif' %}" alt="" width="66" height="36" /></a></li>
+			<li><a href="index4.html"><img src="{% static 'pet/media/images/but4.gif' %}" alt="" width="115" height="36" /></a></li>
+			<li><a href="index5.html" class="active"><img src="{% static 'pet/media/images/but5.gif' %}" alt="" width="93" height="36" /></a></li>
+			<li><a href="index6.html"><img src="{% static 'pet/media/images/but6.gif' %}" alt="" width="114" height="36" /></a></li>
+		</ul>
+	</div>
+	<div id="content"><div class="about">
+			<!-- <img src="{% static 'pet/media/images/title4.gif' %}" alt="" width="597" height="21" /><br /> -->
+			<!-- <p>Temerature: <span id="temperature"></span> </p>
+			<p>Humidity: <span id="humidity"></span> </p>
+			<p>Health: <span id="health"></span> </p>
+			<p>State: <span id="speed"></span> </p> -->
+		</div>
+        
+        <div class="row">
+            <div class="col-md-4">
+            <div class="list">
+                <img src="{% static 'pet/media/images/title5.gif' %}" alt="" width="256" height="21" /><br />
+                <ul>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Aenean mturpis</li>
+                    <li>Maecenas hendrerit masa laoreet</li>
+                    <li>Tellus er sodales enim</li>
+                    <li>Massa ac laoreet iaculipede</li>
+                </ul>
+                <img src="{% static 'pet/media/images/line.gif' %}" alt="" width="256" height="1" />
+                <ul>
+                    <li>Donec massa</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Nulla pulvinar</li>
+                    <li>Maecenas hendrerit, massa</li>
+                    <li>Mauris u tincidunt quis</li>
+                </ul>
+            </div></div>
+			<!-- <div class="col-md-8" style="width: 600px; height: 250px; margin-top: 50px;"id="allmap"></div> -->
+			<div class="col-md-8" style="width: 600px; height: 400px; margin-top: 50px;"id="allmap"></div>
+          </div>
+		
+		<img src="{% static 'pet/media/images/phone.jpg' %}" alt="" width="953" height="87" /><br />
+  	</div>
+	<div id="footer">
+		<div>
+			<a href="index.html">Home</a> | <a href="index2.html">About Club</a> | <a href="index2.html">News</a> | <a href="index2.html">Photogallery</a> | <a href="index2.html">Sponsors</a> | <a href="index2.html">Contact us</a>
+		</div>
+	</div>
+	<div id="copyright">
+		Copyright &copy;. All rights reserved. Design from <a href="#" target="_blank" title="Free Templates">tbb.com</a>
+	</div>
+</body>
+<script src="{% static 'pet/js/jquery.min.js' %}"></script>
+<script src="{% static 'pet/js/yourpet.js' %}"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");    // 创建Map实例
+	var point =new BMap.Point(121.44481,31.030963);
+	map.centerAndZoom(new BMap.Point(121.44481,31.030963), 20);  // 初始化地图,设置中心点坐标和地图级别
+	var marker = new BMap.Marker(point)//创建标注
+	map.addOverlay(marker)//将标注添加到地图
+	marker.addEventListener("click",getAttr)
+	function getAttr(){
+		var p = marker.getPosition();
+		alert("your pet's location is "+p.lng+","+p.lat)
+	}
+	//添加地图类型控件
+	map.addControl(new BMap.MapTypeControl({
+		mapTypes:[
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+        ]}));	  
+	map.setCurrentCity("上海");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+</script>
+</html>

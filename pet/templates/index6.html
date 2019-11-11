@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Dog Club</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-5">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'pet/css/style.css' %}" />
+</head>
+
+<body>
+	<div id="meta">
+		<span><img src="{% static 'pet/media/images/meta1.gif' %}" alt="" width="15" height="15" /> <a href="index.html">Home</a></span>																																																							<div style="position:absolute;top:1px;left:1px;height:0px;width:0px;overflow:hidden"><h1><a href="http://www.cssmoban.com">best free templates</a></h1></div>
+		<span><img src="{% static 'pet/media/images/meta2.gif' %}" alt="" width="15" height="15" /> <a href="index2.html">Contacts</a></span>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="index.html"><img src="{% static 'pet/media/images/but1.gif' %}" alt="" width="104" height="36" /></a></li>
+			<li><a href="index2.html" ><img src="{% static 'pet/media/images/but2.gif' %}" alt="" width="101" height="36" /></a></li>																																		
+			<li><a href="index3.html"><img src="{% static 'pet/media/images/but3.gif' %}" alt="" width="66" height="36" /></a></li>
+			<li><a href="index4.html"><img src="{% static 'pet/media/images/but4.gif' %}" alt="" width="115" height="36" /></a></li>
+			<li><a href="index5.html"><img src="{% static 'pet/media/images/but5.gif' %}" alt="" width="93" height="36" /></a></li>
+			<li><a href="index6.html" class="active"><img src="{% static 'pet/media/images/but6.gif' %}" alt="" width="114" height="36" /></a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div class="about">
+			<!-- <img src="{% static 'pet/media/images/title4.gif' %}" alt="" width="597" height="21" /><br /> -->
+			<!-- <p>Temerature: <span id="temperature"></span> </p>
+			<p>Humidity: <span id="humidity"></span> </p>
+			<p>Health: <span id="health"></span> </p>
+			<p>State: <span id="speed"></span> </p> -->
+			  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+			  <div id="mainchart" style="width: 600px;height:400px;"></div>
+			  <!-- <div id="container" style="height: 100%"></div> -->
+		</div>
+		<div class="list">
+			<img src="{% static 'pet/media/images/title5.gif' %}" alt="" width="256" height="21" /><br />
+			<ul>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Aenean mturpis</li>
+				<li>Maecenas hendrerit masa laoreet</li>
+				<li>Tellus er sodales enim</li>
+				<li>Massa ac laoreet iaculipede</li>
+			</ul>
+			<img src="{% static 'pet/media/images/line.gif' %}" alt="" width="256" height="1" />
+			<ul>
+				<li>Donec massa</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Nulla pulvinar</li>
+				<li>Maecenas hendrerit, massa</li>
+				<li>Mauris u tincidunt quis</li>
+			</ul>
+		</div>
+		<img src="{% static 'pet/media/images/phone.jpg' %}" alt="" width="953" height="87" /><br />
+  	</div>
+	<div id="footer">
+		<div>
+			<a href="index.html">Home</a> | <a href="index2.html">About Club</a> | <a href="index2.html">News</a> | <a href="index2.html">Photogallery</a> | <a href="index2.html">Sponsors</a> | <a href="index2.html">Contact us</a>
+		</div>
+	</div>
+	<div id="copyright">
+		Copyright &copy;. All rights reserved. Design from <a href="#" target="_blank" title="Free Templates">tbb.com</a>
+	</div>
+</body>
+<script src="{% static 'pet/js/jquery.min.js' %}"></script>
+<script src="{% static 'pet/js/echarts.min.js' %}"></script>
+<script src="{% static 'pet/js/statistics.js' %}"></script>
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+function getVirtulData(year) {
+    year = year || '2017';
+    var date = +echarts.number.parseDate(year + '-01-01');
+    var end = +echarts.number.parseDate((+year + 1) + '-01-01');
+    var dayTime = 3600 * 24 * 1000;
+    var data = [];
+    for (var time = date; time < end; time += dayTime) {
+        data.push([
+            echarts.format.formatTime('yyyy-MM-dd', time),
+            Math.floor(Math.random() * 10000)
+        ]);
+    }
+    return data;
+}
+
+option = {
+    title: {
+        top: 30,
+        left: 'center',
+        text: '2016年某人每天的步数'
+    },
+    tooltip : {},
+    visualMap: {
+        min: 0,
+        max: 10000,
+        type: 'piecewise',
+        orient: 'horizontal',
+        left: 'center',
+        top: 65,
+        textStyle: {
+            color: '#000'
+        }
+    },
+    calendar: {
+        top: 120,
+        left: 30,
+        right: 30,
+        cellSize: ['auto', 13],
+        range: '2016',
+        itemStyle: {
+            normal: {borderWidth: 0.5}
+        },
+        yearLabel: {show: false}
+    },
+    series: {
+        type: 'heatmap',
+        coordinateSystem: 'calendar',
+        data: getVirtulData(2016)
+    }
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+</script> -->
+</html>
